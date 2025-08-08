@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lisa — UX/UI + GSAP Scroll</title>
+
+  <!-- Reset + Fonts -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+
+  <!-- App CSS -->
+  <link rel="stylesheet" href="assets/style.css"/>
+
+  <!-- GSAP core + ScrollTrigger (order matters) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <!-- App JS -->
+  <script defer src="assets/main.js"></script>
+</head>
+<body>
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Header / Nav -->
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span>Lisa</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="home-title">
+      <div class="blob one"></div>
+      <div class="blob two"></div>
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">UX / UI Designer</div>
+          <h1 id="home-title" class="headline" data-split>
+            I design clean, friendly, and useful digital experiences.
+          </h1>
+          <p class="sub">Research-driven, detail-oriented, and fast at turning ideas into polished interfaces. Currently exploring delightful motion with GSAP.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#work">See my work</a>
+            <a class="btn" href="#contact">Let’s build something</a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Highlights">
+          <div class="stat"><strong>12+</strong>&nbsp;case studies</div>
+          <div class="stat"><strong>1.5y</strong>&nbsp;experience</div>
+          <div class="stat"><strong>Tools</strong>&nbsp;Figma, HTML/CSS/JS, GSAP</div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="work" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="work-title">Selected Work</h2>
+          <span class="tag">New · Motion + UX</span>
+        </div>
+
+        <div class="grid cards">
+          <article class="card">
+            <div class="thumb" role="img" aria-label="Keepsake wedding memories app mockup"></div>
+            <div class="card-body">
+              <h3>Keepsake — Event Memories App</h3>
+              <p>Private guest uploads for photos, videos, and voice toasts. QR onboarding & accessible UI.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" role="img" aria-label="Travel website mockup"></div>
+            <div class="card-body">
+              <h3>Wanderlust Destinations</h3>
+              <p>Responsive travel site with AOS, Glide, Lightbox, and Leaflet maps. Performance-tuned.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" role="img" aria-label="Motion design package for event"></div>
+            <div class="card-body">
+              <h3>Motion Package — Event Graphics</h3>
+              <p>Intro/outro logo, lower thirds, and swipe transitions inspired by Duolingo’s playful brand.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="skills-title">Skills</h2>
+          <span class="tag">Animated meters</span>
+        </div>
+        <div class="skills">
+          <div class="skill">
+            <h3>UX Research</h3>
+            <div class="meter"><div class="bar" data-target="85"></div></div>
+          </div>
+          <div class="skill">
+            <h3>UI Design</h3>
+            <div class="meter"><div class="bar" data-target="90"></div></div>
+          </div>
+          <div class="skill">
+            <h3>HTML/CSS/JS</h3>
+            <div class="meter"><div class="bar" data-target="80"></div></div>
+          </div>
+          <div class="skill">
+            <h3>Motion (GSAP)</h3>
+            <div class="meter"><div class="bar" data-target="75"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="contact-title">Contact</h2>
+          <span class="tag">Let’s make something</span>
+        </div>
+        <div class="contact-grid">
+          <div class="cta">
+            <p>Have a project in mind? I’m open to freelance and collabs.</p>
+            <a class="btn btn-primary" href="mailto:hello@example.com">Email me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">© <span id="year"></span> Lisa — UX/UI Designer • Built with HTML, CSS, and GSAP</div>
+  </footer>
+</body>
+</html>
