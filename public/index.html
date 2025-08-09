@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <!-- Reset + Fonts + Your CSS (per your snippet) -->
+    <!-- Reset + Fonts + Your CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css" />
     <link rel="stylesheet" href="assets/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,7 +29,6 @@
             <div class="rail-progress"></div>
         </div>
 
-        <!-- sparkles (we'll position/animate in CSS/JS) -->
         <div class="sparks">
             <span class="spark"></span><span class="spark"></span><span class="spark"></span>
             <span class="spark"></span><span class="spark"></span><span class="spark"></span>
@@ -38,7 +37,7 @@
         </div>
     </div>
 
-    <!-- side flyers that enter/exit while scrolling -->
+    <!-- side flyers -->
     <div class="flyers" aria-hidden="true">
         <div class="flyer left">Motion Language</div>
         <div class="flyer right">Smooth Scrub</div>
@@ -51,9 +50,42 @@
     <!-- SECTION 1: HERO -->
     <section class="panel hero" id="hero" aria-labelledby="hero-title">
         <div class="hero-inner">
-            <p class="eyebrow">GSAP + ScrollTrigger</p>
-            <h1 class="headline" id="hero-title">Scroll Demo</h1>
-            <p class="sub">Two sections only. Smooth, simple, and easy to grade.</p>
+            <p class="eyebrow">INTERACTIVE MOTION MAGIC</p>
+
+            <!-- headline with SplitText-like animation (free) -->
+            <h1 class="headline text-split" id="hero-title">Scroll, Drag & Animate</h1>
+            <p class="sub">Experience GSAP animations that react to your moves</p>
+
+            <!-- NEW: Draggable colorizer (from the CodePen) -->
+            <div class="drag-lab">
+                <!-- SVG logo whose gradient we recolor -->
+                <svg class="color-logo" viewBox="0 0 200 200" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="gsapGradient" gradientTransform="rotate(-25)">
+                            <stop offset="0%" stop-color="#9bedff"></stop>
+                            <stop offset="70%" stop-color="#037f9a"></stop>
+                        </linearGradient>
+                    </defs>
+                    <!-- simple mark (ring + bolt) -->
+                    <circle cx="100" cy="100" r="80" fill="none" stroke="url(#gsapGradient)" stroke-width="18"
+                        stroke-linecap="round" />
+                    <path d="M115 55 L85 105 L110 105 L90 145" fill="none" stroke="url(#gsapGradient)" stroke-width="14"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+                <p class="drag-hint">(drag a chip over the logo to change its colors)</p>
+
+                <div class="chips">
+                    <button class="ditem" data-c0="rgb(155,237,255)" data-c1="rgb(3,127,154)"
+                        aria-label="cyan to teal"></button>
+                    <button class="ditem" data-c0="rgb(10,228,72)" data-c1="rgb(171,255,132)"
+                        aria-label="green to lime"></button>
+                    <button class="ditem" data-c0="rgb(255,135,9)" data-c1="rgb(247,189,248)"
+                        aria-label="orange to pink"></button>
+                    <button class="ditem" data-c0="rgb(241,0,203)" data-c1="rgb(254,197,251)"
+                        aria-label="magenta to pastel"></button>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -76,17 +108,14 @@
         </div>
     </section>
 
+    <!-- GSAP core + plugins -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
 
     <script src="assets/main.js"></script>
-
-
-
-
-
 </body>
 
 </html>
