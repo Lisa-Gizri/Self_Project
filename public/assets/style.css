@@ -36,6 +36,38 @@ body {
     overflow-x: hidden;
 }
 
+/* Small screens */
+@media (max-width:768px) {
+    .color-logo {
+        width: min(76vw, 420px)
+    }
+
+    .ring {
+        width: 220px;
+        height: 220px
+    }
+
+    .rail-left {
+        left: 10px
+    }
+
+    .rail-right {
+        right: 10px
+    }
+
+    .flyer {
+        font-size: .9rem
+    }
+
+    .flyer.left {
+        left: 8px
+    }
+
+    .flyer.right {
+        right: 8px
+    }
+}
+
 /* Panels */
 .panel {
     min-height: 100vh;
@@ -175,20 +207,6 @@ body {
 
 .flyer.right {
     right: 16px
-}
-
-@media (max-width:520px) {
-    .flyer {
-        font-size: .9rem
-    }
-
-    .flyer.left {
-        left: 8px
-    }
-
-    .flyer.right {
-        right: 8px
-    }
 }
 
 /* Hero */
@@ -372,25 +390,4 @@ body {
     color: var(--muted);
     font-size: .9rem;
     opacity: .8
-}
-
-
-/* Small screens */
-@media (max-width:520px) {
-    .color-logo {
-        width: min(76vw, 420px)
-    }
-
-    .ring {
-        width: 220px;
-        height: 220px
-    }
-
-    .rail-left {
-        left: 10px
-    }
-
-    .rail-right {
-        right: 10px
-    }
 }
